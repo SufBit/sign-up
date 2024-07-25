@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 98vw;
+    height: 98vh;
+    color:rgb(231, 6, 6);
+}
+
+.image-section {
+    flex:1;
+    background: url('./image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40xw;
+}
+
+
+.image-section .logo {
+    display: flex;
+    height: auto;
+    background: rgb(231, 6, 6, 0.1);
+    position: relative;
+    top: 20vh;
+    gap: 1vw;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image-section .logo img {
+    max-width: 100px; /* Set the maximum width of the logo image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.form-section{
+    flex: 1;
+    padding: 50px;
+    background: black;
+}
+
