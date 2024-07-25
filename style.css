@@ -1,13 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', sans-serif;
+    margin: 0;
 }
 
 .container {
     display: flex;
     flex-flow: row wrap;
-    width: 98vw;
-    height: 98vh;
-    color:rgb(231, 6, 6);
+    width: 100vw;
+    height: 100vh;
+    color:rgb(179, 29, 29);
 }
 
 .image-section {
@@ -16,16 +17,16 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 40xw;
+    width: 100%;
 }
 
 
 .image-section .logo {
     display: flex;
     height: auto;
-    background: rgb(231, 6, 6, 0.1);
+    background: rgba(12, 11, 11, 0.1);
     position: relative;
-    top: 20vh;
+    top: 5vh;
     gap: 1vw;
     padding: 15px 0;
     justify-content: center;
@@ -39,10 +40,119 @@ body {
 }
 
 
-
 .form-section{
     flex: 1;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(0, 0, 0);
+}
+
+h2{
+    padding-left: 10px;
+}
+
+p{
+    padding-left: 10px;
+}
+
+.form-section form{
+    padding: 10px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(196, 194, 194, 0.1);
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group{
+    flex:1;
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
     background: black;
+    color: rgb(179, 29, 29);
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(179, 29, 29);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: rgb(179, 29, 29); /* Change this color to your desired placeholder color */
+    font-size: 14px;
+}
+
+button{
+
+    background: black;
+    border: 1px solid rgb(179, 29, 29);
+    border-radius: 5px;
+    color: rgb(179, 29, 29);
+    padding: 10px;
+    cursor: pointer;
+    height: auto;
+    width: 30%;
+    margin-left: 10px;
+}
+
+button:hover{
+    background: rgb(212, 7, 7);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .image-section {
+        height: 60vh;
+        order: 1; /* Move image-section to the top */
+    }
+
+    .image-section .logo{
+        top:0;
+        left: 80px;
+    }
+
+    .form-section {
+        padding: 20px;
+        height: auto;
+        order: 2; /* Move form-section below image-section */
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
